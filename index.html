@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Git en clair : cours, mémo, quiz et glossaire pour réviser efficacement.">
+  <title>Git en clair — Accueil</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="accueil">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">⎇</span> Git en clair</a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">Accueil</a><a href="cours.html">Cours</a><a href="memo.html">Fiche mémo</a><a href="quiz.html">Quiz</a><a href="glossaire.html">Glossaire</a>
+      <button class="theme-toggle" type="button" aria-label="Activer le mode sombre">◐</button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">RÉVISER · COMPRENDRE · PRATIQUER</p>
+        <h1>Git devient<br><span class="accent">simple à suivre.</span></h1>
+        <p class="lead">Un parcours visuel et progressif pour comprendre les états, les branches, les remotes et les bons réflexes Git — sans jargon inutile.</p>
+        <div class="actions"><a class="button primary" href="cours.html">Commencer le cours <span>→</span></a><a class="button secondary" href="quiz.html">Tester mes connaissances</a></div>
+      </div>
+      <div class="hero-visual" aria-label="Schéma du cycle Git">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="commit-node node-a">A</div><div class="commit-node node-b">B</div><div class="commit-node node-c">C</div>
+        <div class="hero-terminal"><span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span><code>$ git status<br><b>Sur la branche main</b><br>rien à valider, arbre propre</code></div>
+      </div>
+    </section>
+    <section class="container section">
+      <div class="section-heading"><div><p class="eyebrow">VOTRE PARCOURS</p><h2>De zéro à autonome</h2></div><span class="progress-label" id="home-progress-text">0 % terminé</span></div>
+      <div class="progress-bar"><span id="home-progress-bar"></span></div>
+      <div class="path-grid">
+        <a class="path-card featured" href="cours.html#configurer"><span class="path-number">01</span><h3>Les fondamentaux</h3><p>Installer, configurer et comprendre le cycle quotidien.</p><span class="card-arrow">→</span></a>
+        <a class="path-card" href="cours.html#branches"><span class="path-number">02</span><h3>Travailler en branches</h3><p>Isoler une idée, fusionner proprement, gérer les conflits.</p><span class="card-arrow">→</span></a>
+        <a class="path-card" href="cours.html#synchroniser"><span class="path-number">03</span><h3>Collaborer</h3><p>Partager avec un remote et choisir son workflow.</p><span class="card-arrow">→</span></a>
+        <a class="path-card" href="quiz.html"><span class="path-number">04</span><h3>Valider ses acquis</h3><p>80 questions, flashcards et mode examen.</p><span class="card-arrow">→</span></a>
+      </div>
+    </section>
+    <section class="container section split-feature">
+      <div><p class="eyebrow">LE BON MODÈLE MENTAL</p><h2>Trois zones, un flux.</h2><p>Git devient prévisible dès que l’on sait où se trouve son fichier. Le dossier de travail accueille vos modifications, l’index prépare le prochain instantané et le dépôt local conserve l’historique.</p><a class="text-link" href="cours.html#cycle">Voir le schéma du cycle →</a></div>
+      <div class="mini-flow"><div><strong>Dossier</strong><small>je modifie</small></div><i>add →</i><div><strong>Index</strong><small>je prépare</small></div><i>commit →</i><div><strong>Dépôt</strong><small>je conserve</small></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>Git en clair · révision 100 % locale</span><span>Pratique moderne : <code>main</code>, <code>switch</code> et <code>restore</code></span></div></footer>
+  <script src="js/app.js"></script>
+</body>
+</html>

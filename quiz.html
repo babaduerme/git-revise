@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quiz Git : 80 questions, flashcards et mode examen.">
+  <title>Git en clair — Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="quiz">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">⎇</span> Git en clair</a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="cours.html">Cours</a>
+      <a href="memo.html">Fiche mémo</a>
+      <a href="quiz.html" aria-current="page">Quiz</a>
+      <a href="glossaire.html">Glossaire</a>
+      <button class="theme-toggle" type="button" aria-label="Activer le mode sombre">◐</button>
+    </nav>
+  </header>
+  <main class="container quiz-page">
+    <div class="page-intro">
+      <p class="eyebrow">S’ENTRAÎNER</p>
+      <h1>Le quiz<br><span class="accent">qui vous répond.</span></h1>
+      <p class="lead">Choisissez un format. Votre progression et vos meilleurs scores restent dans votre navigateur.</p>
+    </div>
+    <section id="quiz-setup" class="quiz-setup">
+      <div class="quiz-options">
+        <button class="quiz-mode selected" data-mode="random"><b>Quiz aléatoire</b><small>10, 20 ou 40 questions</small></button>
+        <button class="quiz-mode" data-mode="chapter"><b>Par chapitre</b><small>Réviser une notion ciblée</small></button>
+        <button class="quiz-mode" data-mode="flashcards"><b>Flashcards</b><small>Retourner pour mémoriser</small></button>
+        <button class="quiz-mode" data-mode="exam"><b>Mode examen</b><small>Minuteur et correction finale</small></button>
+      </div>
+      <div id="setup-controls" class="setup-controls">
+        <label>Nombre de questions <select id="question-count"><option>10</option><option>20</option><option>40</option></select></label>
+        <label>Chapitre <select id="chapter-select"><option value="all">Tous les chapitres</option></select></label>
+        <button id="start-quiz" class="button primary" type="button">Démarrer →</button>
+      </div>
+    </section>
+    <section id="quiz-area" class="quiz-area hidden">
+      <div class="quiz-top"><span id="quiz-counter"></span><span id="quiz-timer"></span></div>
+      <div class="progress-bar"><span id="quiz-progress"></span></div>
+      <div id="question-card"></div>
+      <div class="quiz-actions"><button id="next-question" class="button primary" type="button" disabled>Valider la réponse</button></div>
+    </section>
+    <section id="quiz-result" class="quiz-result hidden"></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>80 questions couvrant le cours et ses sujets connexes</span><a href="cours.html">Revoir le cours →</a></div></footer>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/flashcards.js"></script>
+</body>
+</html>

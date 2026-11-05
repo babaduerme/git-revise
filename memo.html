@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Git en clair — Fiche mémo</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/print.css" media="print"></head>
+<body data-page="memo"><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">⎇</span> Git en clair</a><button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><nav class="main-nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="cours.html">Cours</a><a href="memo.html" aria-current="page">Fiche mémo</a><a href="quiz.html">Quiz</a><a href="glossaire.html">Glossaire</a><button class="theme-toggle" type="button" aria-label="Activer le mode sombre">◐</button></nav></header><main class="container memo-page"><div class="page-intro memo-intro"><p class="eyebrow">À GARDER SOUS LA MAIN</p><h1>La fiche mémo<br><span class="accent">qui tient sur une page.</span></h1><button class="button primary no-print" onclick="window.print()">Imprimer / PDF</button></div><div class="memo-grid"><section><h2>Commencer</h2><pre><code>git config --global user.name "Nom"
+git config --global user.email "mail"
+git init
+git clone URL</code></pre><h2>Cycle quotidien</h2><pre><code>git status
+git add fichier
+git diff
+git diff --staged
+git commit -m "Décrit le changement"
+git log --all --oneline --graph --stat</code></pre></section><section><h2>Branches</h2><pre><code>git branch
+git switch -c feature/nom
+git switch main
+git merge feature/nom
+git branch -d feature/nom</code></pre><h2>Remote</h2><pre><code>git remote -v
+git remote add origin URL
+git push -u origin main
+git fetch origin
+git pull --rebase</code></pre></section><section><h2>Se rattraper</h2><pre><code>git commit --amend
+git restore fichier
+git restore --staged fichier
+git stash push -m "en cours"
+git stash list
+git stash pop
+git reflog</code></pre><h2>Historique</h2><pre><code>git rebase main
+git rebase -i HEAD~3
+git rebase --continue
+git rebase --abort</code></pre></section></div><p class="memo-warning"><b>Avant <code>reset --hard</code> ou un rebase :</b> vérifiez <code>git status</code>, préservez ce qui compte et ne réécrivez pas une branche partagée.</p></main><footer class="site-footer"><div class="container footer-inner"><span>Git en clair · fiche imprimable</span></div></footer><script src="js/app.js"></script></body></html>
